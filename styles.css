@@ -1775,13 +1775,13 @@ body::-webkit-scrollbar {
 }
 
 .faq-section .section-title {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
 }
 
 .faq-section .section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #777;
     margin-bottom: 40px;
 }
@@ -2035,7 +2035,7 @@ body::-webkit-scrollbar {
 /* contact-us.css */
 .contact-us-section {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Light grey background */
+    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -2074,8 +2074,9 @@ body::-webkit-scrollbar {
 
 .contact-form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Spacing between columns */
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+    align-items: end;
 }
 
 .contact-form .form-group {
@@ -2093,13 +2094,13 @@ body::-webkit-scrollbar {
 .contact-form input[type="text"],
 .contact-form input[type="tel"],
 .contact-form input[type="email"] {
-    width: calc(100% - 12px); /* Adjust for padding */
+    width: calc(100% - 12px);
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
     color: #333;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
 }
 
 .contact-form textarea {
@@ -2111,31 +2112,10 @@ body::-webkit-scrollbar {
     border-radius: 5px;
     font-size: 1rem;
     color: #333;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
     min-height: 210px;
     resize: vertical;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .contact-form .submit-button {
     background-color: #1d72f3;
@@ -2146,31 +2126,16 @@ body::-webkit-scrollbar {
     font-weight: 600;
     text-decoration: none;
     transition: 0.3s ease;
+    margin: 20px auto 0 auto; /* Add top margin and center */
+    display: block;
+    grid-column: 1 / -1; /* Span the button across both columns */
+    width: fit-content; /* Adjust width to content */
 }
 
 .contact-form .submit-button:hover {
     background-color: #fff;
     color: #1d72f3;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Responsive adjustments */
@@ -2326,32 +2291,31 @@ body::-webkit-scrollbar {
 
 .footer-social-icons {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 2px;
+    grid-template-columns: repeat(4, 40px); /* 4 columns */
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .footer-social-icons a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background-color: #e0e0e0;
     color: #333;
     opacity: 0.8;
     transition: opacity 0.3s ease;
-    margin-right: 2px;
-    margin-bottom: 2px;
 }
 
-.footer-social-icons a:last-child {
-    margin-right: 0;
+.footer-social-icons a:hover {
+    opacity: 1;
 }
 
 .footer-social-icons img {
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
     max-width: 100%;
     max-height: 100%;
 }
